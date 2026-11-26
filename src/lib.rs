@@ -1,5 +1,21 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+mod lex;
+
+pub struct Parser {}
+
+impl Parser {
+    pub fn new() -> Self {
+        Parser {}
+    }
+}
+
+pub struct Kson {}
+
+impl Kson {
+    pub fn parse(source: &str) {
+        let lex = lex::Lexer::new(source);
+        let parser = Parser::new();
+        todo!()
+    }
 }
 
 #[cfg(test)]
@@ -8,7 +24,6 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = add(2, 2);
         assert_eq!(result, 4);
     }
 }
